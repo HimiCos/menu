@@ -1,3 +1,16 @@
+// 實現滑動按壓卡片效果
+const cards = document.querySelectorAll('.card');
+
+cards.forEach(card => {
+  card.addEventListener('touchstart', () => {
+    card.style.transform = 'scale(0.95)';
+  });
+
+  card.addEventListener('touchend', () => {
+    card.style.transform = 'scale(1)';
+  });
+});
+
 // 定义一个函数，用于获取用户的抽奖次数
 function getLotteryCount() {
   var cookieArr = document.cookie.split(";");
@@ -56,10 +69,16 @@ start: function () {
 },
 end: function(prize) { // 游戏停止时触发
     alert('恭喜中奖: ' + prize.fonts[0].text)
+    var winningContainer = document.getElementById('my-lucky-gift');
+    var h2Element = winningContainer.querySelector('h2');
+    var spanElement = winningContainer.querySelector('span');
+    h2Element.innerText = '中奖信息';
+    spanElement.innerText = '恭喜中奖：' + prize.fonts[0].text;
 }
 });
 
-window.onload = function() {
+window.onload = function () {
+    // 判断用户是否已经抽过奖
     var lastDate = localStorage.getItem("lastDate");
     var today = new Date().toLocaleDateString();
     if (lastDate === today) {
