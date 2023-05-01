@@ -67,24 +67,76 @@ start: function () {
     myLucky.stop()
     }, 3000)
 },
-end: function(prize) { // 游戏停止时触发
+  end: function (prize) { // 游戏停止时触发
     alert('恭喜中奖: ' + prize.fonts[0].text)
+
+    // 显示中奖信息
     var winningContainer = document.getElementById('my-lucky-gift');
     var h2Element = winningContainer.querySelector('h2');
-    var spanElement = winningContainer.querySelector('span');
+    var spanElement = document.getElementById('span1');
+    var spanTime = document.getElementById('span2');
     h2Element.innerText = '中奖信息';
-    spanElement.innerText = '恭喜中奖：' + prize.fonts[0].text;
+    spanElement.textContent = '恭喜中奖：';
+    spanTime.textContent = '中奖时间：' + new Date().toLocaleString();
+    var strongElement = document.createElement('strong');
+    strongElement.textContent = prize.fonts[0].text;
+    spanElement.appendChild(strongElement)
+
+    // 加上 CSS 样式
+    winningContainer.style.width = '245px';
+    winningContainer.style.border = '3px solid #ccc';
+    winningContainer.style.borderRadius = '20px';
+    winningContainer.style.paddingBottom = '20px';
+    winningContainer.style.margin = '20px auto';
+    winningContainer.style.backgroundColor = 'ivory';
+
+    // 存儲中獎記錄
+    prize.timeStamp = new Date().toLocaleString();
+    var prizeJson = JSON.stringify(prize);
+    localStorage.setItem('prizeData', prizeJson);
 }
 });
 
 window.onload = function () {
-    // 判断用户是否已经抽过奖
-    var lastDate = localStorage.getItem("lastDate");
-    var today = new Date().toLocaleDateString();
-    if (lastDate === today) {
-        lotteryCount = 0;
-    } else {
-        localStorage.setItem("lastDate", today);
-        lotteryCount = 1;
-    }
+  // 判断用户是否已经抽过奖
+  var lastDate = localStorage.getItem("lastDate");
+  var today = new Date().toLocaleDateString();
+  if (lastDate === today) {
+      lotteryCount = 0;
+  } else {
+      localStorage.setItem("lastDate", today);
+      lotteryCount = 1;
+  }
 };
+
+// 定义一个函数，用于获取用户的中獎記錄
+function getPrizeJson() {
+  if (localStorage.getItem('prizeData')) {
+  var prizeJson = localStorage.getItem('prizeData');
+  var prize = JSON.parse(prizeJson);
+    var prizeText = prize.fonts[0].text;
+    var timeStamp = prize.timeStamp;
+  // 显示中奖信息
+  var winningContainer = document.getElementById('my-lucky-gift');
+  var h2Element = winningContainer.querySelector('h2');
+  var spanElement = document.getElementById('span1');
+  var spanTime = document.getElementById('span2');
+  h2Element.innerText = '中奖信息';
+  spanElement.textContent = '恭喜中奖：';
+  spanTime.textContent = '中奖时间：' + timeStamp;
+  var strongElement = document.createElement('strong');
+  strongElement.textContent = prizeText;
+  spanElement.appendChild(strongElement)
+
+  // 加上 CSS 样式
+  winningContainer.style.width = '245px';
+  winningContainer.style.border = '3px solid #ccc';
+  winningContainer.style.borderRadius = '20px';
+  winningContainer.style.paddingBottom = '20px';
+  winningContainer.style.margin = '20px auto';
+  winningContainer.style.backgroundColor = 'ivory';
+} else {
+  return;
+}
+}
+getPrizeJson();
