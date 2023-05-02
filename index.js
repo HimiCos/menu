@@ -1,16 +1,3 @@
-// 實現滑動按壓卡片效果
-const cards = document.querySelectorAll('.card');
-
-cards.forEach(card => {
-  card.addEventListener('touchstart', () => {
-    card.style.transform = 'scale(0.95)';
-  });
-
-  card.addEventListener('touchend', () => {
-    card.style.transform = 'scale(1)';
-  });
-});
-
 // 定义一个函数，用于获取用户的抽奖次数
 function getLotteryCount() {
   var cookieArr = document.cookie.split(";");
@@ -29,6 +16,12 @@ function updateLotteryCount(count) {
 
 // 定义一个变量，表示当前用户的抽奖次数
 var lotteryCount = getLotteryCount();
+
+// 獲取中獎記錄元素
+const winningContainer = document.getElementById('my-lucky-gift');
+const h2Element = winningContainer.querySelector('h2');
+const spanElement = document.getElementById('span1');
+const spanTime = document.getElementById('span2');
 
 const myLucky = new LuckyCanvas.LuckyWheel('#my-lucky', {
 width: '300px',
@@ -68,27 +61,17 @@ start: function () {
     }, 3000)
 },
   end: function (prize) { // 游戏停止时触发
-    alert('恭喜中奖: ' + prize.fonts[0].text)
+    const prizeText = prize.fonts[0].text;
+    alert('恭喜中奖: ' + prizeText)
 
     // 显示中奖信息
-    var winningContainer = document.getElementById('my-lucky-gift');
-    var h2Element = winningContainer.querySelector('h2');
-    var spanElement = document.getElementById('span1');
-    var spanTime = document.getElementById('span2');
     h2Element.innerText = '中奖信息';
-    spanElement.textContent = '恭喜中奖：';
-    spanTime.textContent = '中奖时间：' + new Date().toLocaleString();
-    var strongElement = document.createElement('strong');
-    strongElement.textContent = prize.fonts[0].text;
-    spanElement.appendChild(strongElement)
+    spanElement.innerHTML = `恭喜中奖：<strong>${prizeText}</strong>`;
+    spanTime.textContent = `中奖时间：${new Date().toLocaleString()}`;
 
     // 加上 CSS 样式
-    winningContainer.style.width = '245px';
-    winningContainer.style.border = '3px solid #ccc';
-    winningContainer.style.borderRadius = '20px';
-    winningContainer.style.paddingBottom = '20px';
-    winningContainer.style.margin = '20px auto';
-    winningContainer.style.backgroundColor = 'ivory';
+    winningContainer.classList.add('won');
+    spanTime.classList.add('won');
 
     // 存儲中獎記錄
     prize.timeStamp = new Date().toLocaleString();
@@ -114,27 +97,17 @@ function getPrizeJson() {
   if (localStorage.getItem('prizeData')) {
   var prizeJson = localStorage.getItem('prizeData');
   var prize = JSON.parse(prizeJson);
-    var prizeText = prize.fonts[0].text;
-    var timeStamp = prize.timeStamp;
+  var prizeText = prize.fonts[0].text;
+  var timeStamp = prize.timeStamp;
+    
   // 显示中奖信息
-  var winningContainer = document.getElementById('my-lucky-gift');
-  var h2Element = winningContainer.querySelector('h2');
-  var spanElement = document.getElementById('span1');
-  var spanTime = document.getElementById('span2');
   h2Element.innerText = '中奖信息';
-  spanElement.textContent = '恭喜中奖：';
-  spanTime.textContent = '中奖时间：' + timeStamp;
-  var strongElement = document.createElement('strong');
-  strongElement.textContent = prizeText;
-  spanElement.appendChild(strongElement)
+    spanElement.innerHTML = `恭喜中奖：<strong>${prizeText}</strong>`;
+    spanTime.textContent = `中奖时间：${timeStamp}`;
 
   // 加上 CSS 样式
-  winningContainer.style.width = '245px';
-  winningContainer.style.border = '3px solid #ccc';
-  winningContainer.style.borderRadius = '20px';
-  winningContainer.style.paddingBottom = '20px';
-  winningContainer.style.margin = '20px auto';
-  winningContainer.style.backgroundColor = 'ivory';
+  winningContainer.classList.add('won');
+  spanTime.classList.add('won');
 } else {
   return;
 }
