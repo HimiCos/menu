@@ -9,7 +9,7 @@ body{
     background-color: var(--bg-color);
     color: var(--text-color);
 }
-body.dark-mode {
+[data-theme="dark"] {
     background-color: var(--bg-color-dark);
     color: var(--text-color-dark);
 }
@@ -33,32 +33,28 @@ a{
     border-radius: 20px;
     object-fit: cover;
 }
-
 #my-lucky {
     width: 300px;
     height: 300px;
     margin: 20px auto;
 }
-
 #my-lucky-gift.won{
     width: 245px;
+    color: #15191e;
     border: 3px solid rgb(204, 204, 204);
     border-radius: 20px;
     padding-bottom: 20px;
     margin: 20px auto;
     background-color: ivory;
 }
-
 #span2.won{
     line-height: 2;
 }
-
 #my-lucky-text{
     font-size: 10px;
     text-align: left;
     margin: 20px 27px;
 }
-
 #menu {
     height: 550px;
     margin: 20px auto;
@@ -67,13 +63,14 @@ a{
     justify-content: center;
     align-items: center;
 }
-
 #footer {
     width: 200px;
     height: 70px;
     margin: 20px auto;
 }
-
+[data-theme="dark"] #footer a{
+    color: var(--text-color-dark);
+}
 #beian{
     display: flex;
     height: 50px;
@@ -89,7 +86,6 @@ a{
     gap: 20px;
     position: absolute;
 }
-
 .card {
     display: flex;
     flex-direction: column;
@@ -105,26 +101,22 @@ a{
 .card:active {
     transform: scale(0.97);
 }
-
 .card img {
     width: 100%;
     height: auto;
     border-radius: 4px 4px 0 0;
 }
-
 .card-description {
     padding: 10px;
     background-color: white;
     overflow: hidden;
     border-radius: 0 0 4px 4px;
 }
-
 .card-description h2 {
     font-size: 20px;
     margin: 0;
     background-color: white;
 }
-
 .card-description p {
     font-size: 14px;
     margin: 10px 0 0 0;
