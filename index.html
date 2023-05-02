@@ -5,88 +5,97 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LINGYANG</title>
-    <link rel="stylesheet" type="text/css" href="./index.css">
     <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
     <script>LA.init({id:"K3CuxBvGRXej3Sh2",ck:"K3CuxBvGRXej3Sh2"})</script>
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="./css/loading.css">
 </head>
 <body>
-    <div id="header">
-        <div id="top-photo">
-            <a href="http://example.com">
-            <img src="./cover.jpg">
-            </a>
-        </div>
+    <div id="overlay">
+        <div id="progress"></div>
+        <div id="progress-bar"></div>
+        <img class="logo" src="./assets/LINGYANG.webp">
+    </div>
+    <div id="page-content">
+        <div id="header">
+            <div id="top-photo">
+                <a href="http://example.com">
+                <img src="./assets/cover.jpg">
+                </a>
+            </div>
 
-        <div id="lucky">
-            <div id="my-lucky-title">
-                <h1>幸运大转盘</h1>
-                <span>每天一次，抽奖不花钱</span>
+            <div id="lucky">
+                <div id="my-lucky-title">
+                    <h1>幸运大转盘</h1>
+                    <span>每天一次，抽奖不花钱</span>
+                </div>
+                <div id="my-lucky"></div>
+                <div id="my-lucky-gift">
+                    <h2></h2>
+                    <span id="span1"></span><br />
+                    <span id="span2"></span>
+                </div>
+                <div id="my-lucky-text">
+                    <h3>抽奖规则</h3>
+                    <span>参与资格：只有在本店消费过的顾客才有资格参与抽奖活动。</span><br />
+                    <span>参与方式：需前往本店并在店内现场转动抽奖轮盘，获取抽奖资格。</span><br />
+                    <span>奖品设置：所有奖品均为本店提供，具体奖项以抽奖页面中实际显示为准。所有奖品不可兑换现金或转让。</span><br />
+                    <span>中奖规则：所有中奖者将由抽奖轮盘系统根据概率自动抽取，一旦中奖，将无法重新抽取。每个顾客每天仅有一次中奖机会。</span><br />
+                    <span>活动日期：本店抽奖活动具体日期以本店公告为准。</span><br />
+                    <strong>地址：XXXXXXXXX&nbsp;&nbsp;联系电话：XXXXXXXX</strong>
+                </div>
             </div>
-            <div id="my-lucky"></div>
-            <div id="my-lucky-gift">
-                <h2></h2>
-                <span id="span1"></span><br />
-                <span id="span2"></span>
-            </div>
-            <div id="my-lucky-text">
-                <h3>抽奖规则</h3>
-                <span>参与资格：只有在本店消费过的顾客才有资格参与抽奖活动。</span><br />
-                <span>参与方式：需前往本店并在店内现场转动抽奖轮盘，获取抽奖资格。</span><br />
-                <span>奖品设置：所有奖品均为本店提供，具体奖项以抽奖页面中实际显示为准。所有奖品不可兑换现金或转让。</span><br />
-                <span>中奖规则：所有中奖者将由抽奖轮盘系统根据概率自动抽取，一旦中奖，将无法重新抽取。每个顾客每天仅有一次中奖机会。</span><br />
-                <span>活动日期：本店抽奖活动具体日期以本店公告为准。</span><br />
-                <strong>地址：XXXXXXXXX&nbsp;&nbsp;联系电话：XXXXXXXX</strong>
+            
+        </div>
+        <div id="menu">
+            <div class="card-grid">
+                <a href="https://example.com/target-page.html">
+                    <div class="card">
+                        <img src="./assets/hamburger.png">
+                        <div class="card-description">
+                            <h2>Card Title</h2>
+                            <p>Card description goes here.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://example.com/target-page.html">
+                    <div class="card">
+                        <img src="./assets/hamburger.png">
+                        <div class="card-description">
+                            <h2>Card Title</h2>
+                            <p>Card description goes here.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://example.com/target-page.html">
+                    <div class="card">
+                        <img src="./assets/hamburger.png">
+                        <div class="card-description">
+                            <h2>Card Title</h2>
+                            <p>Card description goes here.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://example.com/target-page.html">
+                    <div class="card">
+                        <img src="./assets/hamburger.png">
+                        <div class="card-description">
+                            <h2>Card Title</h2>
+                            <p>Card description goes here.</p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
-        
-    </div>
-    <div id="menu">
-        <div class="card-grid">
-            <a href="https://example.com/target-page.html">
-                <div class="card">
-                    <img src="./hamburger.png">
-                    <div class="card-description">
-                        <h2>Card Title</h2>
-                        <p>Card description goes here.</p>
-                    </div>
-                </div>
-            </a>
-            <a href="https://example.com/target-page.html">
-                <div class="card">
-                    <img src="./hamburger.png">
-                    <div class="card-description">
-                        <h2>Card Title</h2>
-                        <p>Card description goes here.</p>
-                    </div>
-                </div>
-            </a>
-            <a href="https://example.com/target-page.html">
-                <div class="card">
-                    <img src="./hamburger.png">
-                    <div class="card-description">
-                        <h2>Card Title</h2>
-                        <p>Card description goes here.</p>
-                    </div>
-                </div>
-            </a>
-            <a href="https://example.com/target-page.html">
-                <div class="card">
-                    <img src="./hamburger.png">
-                    <div class="card-description">
-                        <h2>Card Title</h2>
-                        <p>Card description goes here.</p>
-                    </div>
-                </div>
-            </a>
+        <div id="footer">
+                <a href="https://beian.miit.gov.cn/#/Integrated/index" id="beian">鲁ICP备2023007969号</a>
+                <span>Copyright © 2023 <a href="https://www.himicos.cc">HimiCos</a> </span>
         </div>
     </div>
-    <div id="footer">
-            <a href="https://beian.miit.gov.cn/#/Integrated/index" id="beian">鲁ICP备2023007969号</a>
-            <span>Copyright © 2023 <a href="https://www.himicos.cc">HimiCos</a> </span>
-    </div>
-    <script src="./dark.js"></script>
-    <script src="./card.js"></script>
+    <script src="./js/loading.js"></script>
+    <script src="./js/dark.js"></script>
+    <script src="./js/card.js"></script>
     <script src="https://unpkg.com/lucky-canvas@1.7.25"></script>
-    <script src="./index.js"></script>
+    <script src="./js/lucky.js"></script>
 </body>
 </html>
