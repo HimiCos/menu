@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="./css/index.css">
     <link rel="stylesheet" type="text/css" href="./css/loading.css">
     <link rel="stylesheet" type="text/css" href="./css/details.css">
+    <link rel="stylesheet" type="text/css" href="./css/comments.css">
 </head>
 <body>
     <div class="night">
@@ -119,6 +120,7 @@
                 </a>
             </div>
         </div>
+        <div id="tcomment"></div>
         <div id="footer">
                 <a href="https://beian.miit.gov.cn/#/Integrated/index" id="beian">鲁ICP备2023007969号</a>
                 <span>Copyright © 2023 <a href="https://www.himicos.cc">HimiCos</a> </span>
@@ -129,5 +131,13 @@
     <script src="./js/card.js"></script>
     <script src="https://unpkg.com/lucky-canvas@1.7.25"></script>
     <script src="./js/lucky.js"></script>
+    <script src="https://cdn.staticfile.org/twikoo/1.6.16/twikoo.all.min.js"></script>
+    <script>
+    twikoo.init({
+    envId: 'https://comment.himicos.cc' ,
+    el: '#tcomment', // 容器元素
+    lang: 'zh-CN',
+    })
+    </script>
 </body>
 </html>

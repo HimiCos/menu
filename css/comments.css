@@ -1,0 +1,19 @@
+.tk-comments{
+    margin: auto;
+    width: 324px;
+}
+/* 隐藏网站 */
+.el-input:last-child{
+    display: none !important;
+}
+.tk-expand {
+    width: 20% !important;
+    margin: auto;
+    transition: none !important;
+}
+.tk-expand:hover {
+    border-radius: 20px;
+}
+.tk-footer {
+    display: none !important;
+}
