@@ -1,17 +1,32 @@
 // 增加暗色頁面
 function toggleDarkMode() {
+  // 獲取值或元素
   var now = new Date();
   var hour = now.getHours();
+
+  var loading = document.getElementById('overlay');
   var body = document.body;
+  var gift = document.getElementById('my-lucky-gift.won');
+  var summaryElement = document.querySelector('details summary');
+  var content = document.getElementsByClassName('content')[0];
+  var carddescription = document.getElementsByClassName('card-description')[0];
   var footer = document.getElementById('footer');
-  var loading = document.getElementById('overlay')
+
   if (hour >= 19 || hour < 6) { // 如果在晚上8点到早上6点之间
-    body.setAttribute('data-theme', 'dark');
-    footer.setAttribute('data-theme', 'dark');
+    // 添加星空背景
+    const newLink = document.createElement('link');
+    newLink.rel = 'stylesheet';
+    newLink.href = './css/skynight.css';
+    document.head.appendChild(newLink);
+    
+    // 添加暗色主题
     loading.setAttribute('data-theme', 'dark');
-  } else {
-    body.setAttribute('data-theme', 'default');
-    loading.setAttribute('data-theme', 'default');
+    body.setAttribute('data-theme', 'dark');
+    gift.setAttribute('data-theme', 'dark');
+    summaryElement.setAttribute('data-theme', 'dark');
+    content.setAttribute('data-theme', 'dark');
+    carddescription.setAttribute('data-theme', 'dark');
+    footer.setAttribute('data-theme', 'dark');
   }
 }
 toggleDarkMode()

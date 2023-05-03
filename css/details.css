@@ -26,6 +26,10 @@ details.folding-tag > summary{
     position: relative;
     line-height: normal;
 }
+[data-theme="dark"] .folding-tag > summary {
+    background: #101011c9;
+    color: var(--text-color-dark);
+}
 details.folding-tag[open] > summary {
     border: none !important;
     border-radius: 14px 14px 0px 0px !important;
@@ -41,10 +45,13 @@ details.folding-tag > summary::marker {
 details.folding-tag[open] > summary::marker {
     color: #fff;
 }
-details.folding-tag[open] > div.content {
+.content {
     border-radius: 0 0 15px 15px;
     padding: 37px 37px 22px 22px;
     margin: -16px;
     background: white;
     line-height: 1.7;
+}
+[data-theme="dark"] .content {
+    background: rgb(22 22 22 / 80%) !important;
 }
