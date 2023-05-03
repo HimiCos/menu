@@ -1,4 +1,4 @@
-const pageLoadTime = Math.floor(Math.random() * 1000) + 1000
+const pageLoadTime = Math.floor(Math.random() * 500) + 500;
 const increment = (100 / ((pageLoadTime-50) / 20)).toFixed(0); 
 
 document.addEventListener("DOMContentLoaded", function () {

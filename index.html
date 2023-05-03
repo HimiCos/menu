@@ -5,16 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LINGYANG</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/logo.svg"/>
     <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
     <script>LA.init({id:"K3CuxBvGRXej3Sh2",ck:"K3CuxBvGRXej3Sh2"})</script>
     <link rel="stylesheet" type="text/css" href="./css/index.css">
     <link rel="stylesheet" type="text/css" href="./css/loading.css">
+    <link rel="stylesheet" type="text/css" href="./css/details.css">
 </head>
 <body>
     <div id="overlay">
         <div id="progress"></div>
         <div id="progress-bar"></div>
-        <img class="logo" src="./assets/LINGYANG.webp">
+        <img class="logo" src="./assets/logo.svg">
     </div>
     <div id="page-content">
         <div id="header">
@@ -35,15 +37,23 @@
                     <span id="span1"></span><br />
                     <span id="span2"></span>
                 </div>
-                <div id="my-lucky-text">
-                    <h3>抽奖规则</h3>
-                    <span>参与资格：只有在本店消费过的顾客才有资格参与抽奖活动。</span><br />
-                    <span>参与方式：需前往本店并在店内现场转动抽奖轮盘，获取抽奖资格。</span><br />
-                    <span>奖品设置：所有奖品均为本店提供，具体奖项以抽奖页面中实际显示为准。所有奖品不可兑换现金或转让。</span><br />
-                    <span>中奖规则：所有中奖者将由抽奖轮盘系统根据概率自动抽取，一旦中奖，将无法重新抽取。每个顾客每天仅有一次中奖机会。</span><br />
-                    <span>活动日期：本店抽奖活动具体日期以本店公告为准。</span><br />
-                    <strong>地址：XXXXXXXXX&nbsp;&nbsp;联系电话：XXXXXXXX</strong>
-                </div>
+                <details class="folding-tag">
+                    <summary>抽奖规则</summary>
+                        <div class="content">
+                            <span><strong>参与资格</strong>：只有在本店消费过的顾客才有资格参与抽奖活动。</span><br />
+                            <span><strong>参与方式</strong>：需前往本店并在店内现场转动抽奖轮盘，获取抽奖资格。</span><br />
+                            <span><strong>奖品设定</strong>：所有奖品均为本店提供，具体奖项以抽奖页面中实际显示为准。所有奖品不可兑换现金或转让。</span><br />
+                            <span><strong>中奖日期</strong>：所有中奖者将由抽奖轮盘系统根据概率自动抽取，一旦中奖，将无法重新抽取。每个顾客每天仅有一次中奖机会。</span><br />
+                            <span><strong>活动日期</strong>：本店抽奖活动具体日期以本店公告为准。</span><br />
+                        </div>
+                </details><br />
+                <details class="folding-tag">
+                    <summary>联系方式</summary>
+                        <div class="content">
+                            <strong>地址：XXXXXXXXX</strong><br />
+                            <strong>联系电话：XXXXXXXX</strong>
+                        </div>
+                </details>
             </div>
             
         </div>

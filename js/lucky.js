@@ -23,6 +23,17 @@ const h2Element = winningContainer.querySelector('h2');
 const spanElement = document.getElementById('span1');
 const spanTime = document.getElementById('span2');
 
+// 获取当前时间 并且格式为 2020-01-01 12:00
+
+var currentTime = new Date();
+var year = currentTime.getFullYear();
+var month = currentTime.getMonth() + 1;
+var day = currentTime.getDate();
+var hours = currentTime.getHours();
+var minutes = currentTime.getMinutes();
+// 输出年月日时分，使用空格或其他字符分隔
+var winTime = year + "年" + month + "月" + day + "日" + " " + hours + ":" + minutes;
+
 const myLucky = new LuckyCanvas.LuckyWheel('#my-lucky', {
 width: '300px',
 height: '300px',
@@ -44,7 +55,7 @@ buttons: [{
 start: function () {
     // 添加限制用户抽奖次数的判断逻辑
     if (lotteryCount <= 0) {
-        alert('您的抽奖次数已用完，请明天再来哦~');
+        alert('您的抽奖次数已用完，请明天再来哦~~~');
         return;
     }
     
@@ -67,27 +78,33 @@ start: function () {
     // 显示中奖信息
     h2Element.innerText = '中奖信息';
     spanElement.innerHTML = `恭喜中奖：<strong>${prizeText}</strong>`;
-    spanTime.textContent = `中奖时间：${new Date().toLocaleString()}`;
+    spanTime.textContent = `中奖时间：${winTime}`;
 
     // 加上 CSS 样式
     winningContainer.classList.add('won');
     spanTime.classList.add('won');
 
     // 存儲中獎記錄
-    prize.timeStamp = new Date().toLocaleString();
+    prize.timeStamp = winTime;
+    prize.wonDay = day;
     var prizeJson = JSON.stringify(prize);
     localStorage.setItem('prizeData', prizeJson);
 }
 });
 
+// 獲取中獎相關的數據
+var prizeJson = localStorage.getItem('prizeData');
+var prize = JSON.parse(prizeJson);
+var wonDay = prize.wonDay;
+var prizeText = prize.fonts[0].text;
+var timeStamp = prize.timeStamp
+  
 window.onload = function () {
   // 判断用户是否已经抽过奖
-  var lastDate = localStorage.getItem("lastDate");
-  var today = new Date().toLocaleDateString();
-  if (lastDate === today) {
+
+  if (wonDay === day) {
       lotteryCount = 0;
   } else {
-      localStorage.setItem("lastDate", today);
       lotteryCount = 1;
   }
 };
@@ -95,15 +112,11 @@ window.onload = function () {
 // 定义一个函数，用于获取用户的中獎記錄
 function getPrizeJson() {
   if (localStorage.getItem('prizeData')) {
-  var prizeJson = localStorage.getItem('prizeData');
-  var prize = JSON.parse(prizeJson);
-  var prizeText = prize.fonts[0].text;
-  var timeStamp = prize.timeStamp;
     
   // 显示中奖信息
   h2Element.innerText = '中奖信息';
-    spanElement.innerHTML = `恭喜中奖：<strong>${prizeText}</strong>`;
-    spanTime.textContent = `中奖时间：${timeStamp}`;
+  spanElement.innerHTML = `恭喜中奖：<strong>${prizeText}</strong>`;
+  spanTime.textContent = `中奖时间：${timeStamp}`;
 
   // 加上 CSS 样式
   winningContainer.classList.add('won');
