@@ -6,6 +6,7 @@ function toggleDarkMode() {
 
   var loading = document.getElementById('overlay');
   var body = document.body;
+  var nav = document.getElementById('nav')
   var a = document.querySelector('a');
   var luckyTitle = document.getElementById('lucky-title-img');
   var gift = document.getElementById('my-lucky-gift.won');
@@ -23,11 +24,14 @@ function toggleDarkMode() {
 
     // 替换 darkLuckyTitle
     var darkLuckyTitlePath = './assets/dark-lucky-tilte.webp';
-    luckyTitle.src = darkLuckyTitlePath;
+    if (luckyTitle) {
+          luckyTitle.src = darkLuckyTitlePath;
+    }
     
     // 添加暗色主题
     loading.setAttribute('data-theme', 'dark');
     body.setAttribute('data-theme', 'dark');
+    nav.setAttribute('data-theme', 'dark');
     a.setAttribute('data-theme', 'dark');
     gift.setAttribute('data-theme', 'dark');
     summaryElement.setAttribute('data-theme', 'dark');

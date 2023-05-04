@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>留言板</title>
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="./css/loading.css">
+    <link rel="stylesheet" type="text/css" href="./css/comments.css">
+    <link rel="stylesheet" type="text/css" href="./font/iconfont.css">
+</head>
+<body>
+    <div class="night">
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+    </div>
+    <div id="overlay">
+        <div id="progress"></div>
+        <div id="progress-bar"></div>
+        <img class="logo" src="./assets/logo.svg">
+    </div>
+    <div id="nav">
+        <ul>
+            <li><a href="./index.html" style="
+    background: none !important;"><span class="iconfont icon-zhuye"> </span>首页</a></li>
+            <li><a href=""><span class="iconfont icon-jurassic_message"> </span>留言板</a></li>
+            <li><a href="./about.html"><span class="iconfont icon-guanyu1"> </span>关于</a></li>
+        </ul>
+    </div>
+    <div id="tcomment"></div>
+    <div id="footer">
+        <a href="https://beian.miit.gov.cn/#/Integrated/index" id="beian">鲁ICP备2023007969号</a>
+        <span>Copyright © 2023 <a href="https://www.himicos.cc">HimiCos</a> </span>
+    </div>
+    <script src="./js/loading.js"></script>
+    <script src="./js/dark.js"></script>
+    <script src="https://cdn.staticfile.org/twikoo/1.6.16/twikoo.all.min.js"></script>
+    <script>
+    twikoo.init({
+    envId: 'https://comment.himicos.cc' ,
+    el: '#tcomment', // 容器元素
+    lang: 'zh-CN',
+    })
+    </script>
+</body>
+</html>
