@@ -2,9 +2,18 @@
     margin: auto;
     width: 324px;
 }
-/* 隐藏网站 */
-.el-input:last-child{
+.el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(3) {
     display: none !important;
+}
+.tk-comment {
+    margin-top: 0!important;
+    margin-bottom: 1rem!important;
+    transition: .3s;
+    border-radius: 4px;
+    padding: 0;
+    padding-top: 1rem;
+    border: none;
+    border-top: 2px dashed rgba(66,89,239,0.137);
 }
 .tk-expand {
     width: 20% !important;

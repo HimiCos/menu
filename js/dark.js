@@ -6,10 +6,12 @@ function toggleDarkMode() {
 
   var loading = document.getElementById('overlay');
   var body = document.body;
+  var a = document.querySelector('a');
+  var luckyTitle = document.getElementById('lucky-title-img');
   var gift = document.getElementById('my-lucky-gift.won');
   var summaryElement = document.querySelector('details summary');
   var content = document.getElementsByClassName('content')[0];
-  var carddescription = document.getElementsByClassName('card-description')[0];
+  var cardDescription = document.getElementsByClassName('card-description')[0];
   var footer = document.getElementById('footer');
 
   if (hour >= 19 || hour < 6) { // 如果在晚上8点到早上6点之间
@@ -17,15 +19,20 @@ function toggleDarkMode() {
     const newLink = document.createElement('link');
     newLink.rel = 'stylesheet';
     newLink.href = './css/skynight.css';
-    document.head.appendChild(newLink);
+    document.head.appendChild(newLink); 
+
+    // 替换 darkLuckyTitle
+    var darkLuckyTitlePath = './assets/dark-lucky-tilte.webp';
+    luckyTitle.src = darkLuckyTitlePath;
     
     // 添加暗色主题
     loading.setAttribute('data-theme', 'dark');
     body.setAttribute('data-theme', 'dark');
+    a.setAttribute('data-theme', 'dark');
     gift.setAttribute('data-theme', 'dark');
     summaryElement.setAttribute('data-theme', 'dark');
     content.setAttribute('data-theme', 'dark');
-    carddescription.setAttribute('data-theme', 'dark');
+    cardDescription.setAttribute('data-theme', 'dark');
     footer.setAttribute('data-theme', 'dark');
   }
 }

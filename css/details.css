@@ -12,6 +12,9 @@ details.folding-tag[open] {
     border-color: #3b70fc !important;
     border: 1px solid #3b70fc !important;
 }
+details.folding-tag:not([open]) > * {
+   transition: 0.3s;
+}
 details.folding-tag > summary{
     text-align: center;
     border: 1px solid #e3e8f7;
@@ -39,7 +42,6 @@ details.folding-tag[open] > summary {
     box-shadow: 0 8px 12px -3px #4259ef23;
 }
 details.folding-tag > summary::marker {
-    color: #3b70fc;
     font-size: 16px;
 }
 details.folding-tag[open] > summary::marker {
