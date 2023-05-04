@@ -111,7 +111,7 @@ window.onload = function () {
 
 // 定义一个函数，用于获取用户的中獎記錄
 function getPrizeJson() {
-  if (localStorage.getItem('prizeData')) {
+  if (wonDay === day) {
     
   // 显示中奖信息
   h2Element.innerText = '中奖信息';

@@ -15,6 +15,9 @@ function toggleDarkMode() {
   var cardDescription = document.getElementsByClassName('card-description')[0];
   var footer = document.getElementById('footer');
 
+  // comment
+  var commentMain = document.getElementsByClassName('comments-main')[0];
+
   if (hour >= 19 || hour < 6) { // 如果在晚上8点到早上6点之间
     // 添加星空背景
     const newLink = document.createElement('link');
@@ -38,6 +41,9 @@ function toggleDarkMode() {
     content.setAttribute('data-theme', 'dark');
     cardDescription.setAttribute('data-theme', 'dark');
     footer.setAttribute('data-theme', 'dark');
+
+    // comment
+    commentMain.setAttribute('data-theme', 'dark');
   }
 }
 toggleDarkMode()
