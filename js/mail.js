@@ -12,7 +12,7 @@ outer.addEventListener('click', function () {
             } else if (imageContainer.classList.contains('image2')) {
                 imageContainer.removeAttribute('style');
                 imageContainer.style.top = '0';
-                imageContainer.style.height = '404px';
+                imageContainer.style.height = '380px';
             } else if (imageContainer.classList.contains('image3')) {
                 imageContainer.style.top = '384px';
             }

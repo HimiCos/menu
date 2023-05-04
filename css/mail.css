@@ -25,14 +25,14 @@ img{
     position: absolute;
     left: 50%;
     transform: translate(-50%, 9%);
-    height: 125px;
+    height: 123px;
     width: 250px;
     border-radius: 12px 12px 0 0;
     z-index: 2;
     top: 84px;
     border: #ddd 1px solid;
     overflow: hidden;
-    transition: all 1.1s;
+    transition: all 0.9s;
 }
 .image3 {
     z-index: 100;
@@ -46,7 +46,6 @@ img{
     background: rgba(22, 22, 22, 0.8);
 }
 .title4{
-    text-decoration: none;
     border-top: #ddd 1px solid;
     text-align: center;
     margin: -8px;
