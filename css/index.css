@@ -200,3 +200,36 @@ a{
     color: var(--text-color-dark);
     background-color: #090a0f00;
 }
+.chat {
+    width: 300px;
+    margin: 40px auto;
+    word-wrap: break-word;
+    background-color: #fff;
+    border-radius: 20px;
+}
+[data-theme="dark"] .chat{
+    background-color: #202020;
+}
+.chat > h3{
+    margin: 0;
+    padding: 15px 20px;
+    border-radius: 20px 20px 0 0;
+    font-family: '钉钉进步体 Regular';
+}
+.chat1 {
+    background: linear-gradient(to right, #FFD700, #FF0000);
+}
+.chat2 {
+    background: linear-gradient(to right, #00FFFF, #006400);
+}
+[data-theme="dark"] .chat1{
+    background: linear-gradient(to right, #FF0000, #FFD700);
+}
+[data-theme="dark"] .chat2{
+    background: linear-gradient(to right, #006400, #00FFFF);
+}
+.chat > p{
+    font-family: '钉钉进步体 Regular';
+    margin-top: 28px;
+    padding: 0px 20px;
+}
