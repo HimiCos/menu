@@ -39,6 +39,16 @@ img{
     z-index: 100;
     top: 92px;
 }
+.image1.move {
+  transform: translateY(292px);
+  transition: all 1.5s;
+}
+
+.image3.move {
+  transform: translateY(292px);
+  transition: all 1.5s;
+}
+
 .comments-main{
     background: #fff;
     border-radius: 0 0 12px 12px;
