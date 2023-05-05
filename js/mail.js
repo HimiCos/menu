@@ -21,7 +21,7 @@ outer.addEventListener('click', function () {
     } else {
         for (var i = 0; i < imageContainers.length; i++) {
             var imageContainer = imageContainers[i];
-            outer.style.height = '275px';
+            outer.style.height = '320px';
             if (imageContainer.classList.contains('image1')) {
                 imageContainer.removeAttribute('style');
             } else if (imageContainer.classList.contains('image2')) {
