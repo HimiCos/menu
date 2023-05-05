@@ -26,7 +26,7 @@ outer.addEventListener('click', function () {
                 imageContainer.removeAttribute('style');
             } else if (imageContainer.classList.contains('image2')) {
                 imageContainer.removeAttribute('style');
-                imageContainer.style.transition = 'all 0.5s';
+                imageContainer.style.transition = 'all 1.5s';
             } else if (imageContainer.classList.contains('image3')) {
                 imageContainer.removeAttribute('style');
             }
