@@ -25,11 +25,6 @@ function toggleDarkMode() {
     newLink.href = './css/skynight.css';
     document.head.appendChild(newLink); 
 
-    // 替换 darkLuckyTitle
-    var darkLuckyTitlePath = './assets/dark-lucky-tilte.webp';
-    if (luckyTitle) {
-          luckyTitle.src = darkLuckyTitlePath;
-    }
     
     // 添加暗色主题
     loading.setAttribute('data-theme', 'dark');

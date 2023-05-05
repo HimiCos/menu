@@ -20,7 +20,40 @@ a{
 [data-theme="dark"] a {
     color: var(--text-color-dark);
 }
-
+.lucky-title-1{
+    font-family: "钉钉进步体 Regular";
+    font-size: 52px;
+}
+.lucky-title-2{
+    font-family: "钉钉进步体 Regular";
+    font-size: 32px;
+    background: linear-gradient(to bottom, #f92121, #ff6666);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; 
+}
+.lucky-title-3{
+    font-family: "钉钉进步体 Regular";
+    font-size: 32px;
+}
+#my-comment-title{
+    margin-top: 25px;
+    font-family: "钉钉进步体 Regular";
+    text-align: center;
+}
+.comment-title-1{
+    font-size: 23px;
+}
+.comment-title-2{
+    font-size: 18px;
+    background: linear-gradient(to bottom, #f92121, #ff6666);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; 
+}
+.comment-title-3{
+    font-size: 18px;
+}
 #header {
     text-align: center;
 }
@@ -47,6 +80,7 @@ a{
     justify-content: space-around;
     margin: 0;
     padding: inherit;
+    font-weight: bold;
 }
 #nav li {
     margin: 21px 20px;

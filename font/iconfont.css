@@ -2,6 +2,11 @@
   font-family: "iconfont"; /* Project id  */
   src: url('iconfont.ttf?t=1683189682871') format('truetype');
 }
+@font-face {
+  font-family: "钉钉进步体 Regular";font-weight: 400;src: url("./DingTalk_JinBuTi_Regular.woff2") format("woff2"),
+  url("./DingTalk_JinBuTi_Regular.woff") format("woff");
+  font-display: swap;
+}
 
 .iconfont {
   font-family: "iconfont" !important;
