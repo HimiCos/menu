@@ -108,6 +108,7 @@ a{
     width: 70%;
 }
 #my-lucky-gift.won{
+    font-family: "钉钉进步体 Regular";
     width: 245px;
     border: 3px solid rgb(204, 204, 204);
     border-radius: 20px;
@@ -130,6 +131,7 @@ a{
     align-items: center;
 }
 #footer {
+    font-family: "钉钉进步体 Regular";
     width: 200px;
     height: 70px;
     margin: 20px auto;

@@ -2,6 +2,7 @@
     margin-left: 32px;
 }
 .tk-comments{
+    font-family: "钉钉进步体 Regular";
     margin: auto;
     width: 324px;
 }
@@ -35,4 +36,13 @@
 }
 .tk-footer {
     display: none !important;
+}
+.twikoo .el-input__inner, .twikoo .el-textarea__inner{
+    font-family: "钉钉进步体 Regular";
+}
+.twikoo .el-button:not(.el-button--primary):not(.el-button--text){
+    font-family: "钉钉进步体 Regular";
+}
+.twikoo .el-button--primary.is-disabled, .twikoo .el-button--primary.is-disabled:active, .twikoo .el-button--primary.is-disabled:focus, .twikoo .el-button--primary.is-disabled:hover{
+    font-family: "钉钉进步体 Regular";
 }
