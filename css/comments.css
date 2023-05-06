@@ -1,14 +1,18 @@
 #comment-head{
-    transition: margin-top 1s;
+    transition: transform 1.5s;
     margin-left: 32px;
 }
 #comment-head.move{
-    margin-top: 300px;
+    transform: translateY(300px);
 }
 .tk-comments{
     font-family: "钉钉进步体 Regular";
     margin: auto;
     width: 324px;
+    transition: transform 1.5s;
+}
+.tk-comments.move{
+    transform: translateY(300px);
 }
 .el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(3) {
     display: none !important;
