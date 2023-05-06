@@ -1,5 +1,9 @@
 #comment-head{
+    transition: margin-top 1s;
     margin-left: 32px;
+}
+#comment-head.move{
+    margin-top: 300px;
 }
 .tk-comments{
     font-family: "钉钉进步体 Regular";

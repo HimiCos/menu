@@ -1,32 +1,20 @@
 var outer = document.querySelector('.outer');
+var commentHead = document.getElementById('comment-head');
 const images = document.querySelectorAll('.image-container');
 var isOpen = false;
 
 outer.addEventListener('click', function () {
     if (!isOpen) {
-        outer.style.height = '666px';
-        for (let i = 0; i < images.length; i++) {
-            if (i === 0) {
-                images[i].classList.add('move');
-            } else if (i === 1) {
-                images[i].style.top = '0';
-                images[i].style.height = '380px';
-            } else if (i === 2) {
-                images[i].classList.add('move');
-            }
-        }
+        commentHead.classList.add('move');
+        images[0].classList.add('move');
+        images[1].classList.add('move');
+        images[2].classList.add('move');
         isOpen = true;
     } else {
-        outer.style.height = '320px';
-        for (let i = 0; i < images.length; i++) {
-            if (i === 0) {
-                images[i].classList.remove('move');
-            } else if (i === 1) {
-                images[i].removeAttribute('style');
-            } else if (i === 2) {
-                images[i].classList.remove('move');
-            }
-        }
+        commentHead.classList.remove('move');
+        images[0].classList.remove('move');
+        images[1].classList.remove('move');
+        images[2].classList.remove('move');
         isOpen = false;
     }
 });
