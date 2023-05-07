@@ -23,7 +23,7 @@ img{
 .image2 {
     position: absolute;
     left: 5px;
-    top: 96px;
+    top: 95px;
     height: 123px;
     width: 250px;
     border-radius: 12px 12px 0 0;
@@ -42,7 +42,7 @@ img{
 .image2.move {
   height: 365px;
   transform: translateY(-50px);
-  transition: transform .9s, height 1.1s;
+  transition: transform .9s, height 1.05s;
 }
 .image3.move {
   transform: translateY(292px);
